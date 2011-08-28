@@ -7,13 +7,13 @@
  */
 
 (function( $ ){
-    $.fn.forgetMeNot = function(storageName) {
-        if(localStorage.getItem(storageName)) {
-            this.val(localStorage.getItem(storageName));
+    $.fn.forgetMeNot = function() {
+        if(localStorage.getItem(this.attr("name"))) {
+            this.val(localStorage.getItem(this.attr("name")));
 	}
-        var theElement = this;
-        this.bind('keyup', function() {
-            localStorage.setItem(storageName, theElement.val());
+        var me = this;
+        this.change(function() {
+            localStorage.setItem(me.attr("name"), me.val());
         });
     };
 })( jQuery );

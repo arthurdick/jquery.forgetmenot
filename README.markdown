@@ -9,11 +9,11 @@ First, load [jQuery](http://jquery.com/) and the forgetmenot plugin:
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="jquery.forgetmenot.js" type="text/javascript"></script>
 
-Then, attach it to an input box:
+Then, call forgetmenot on an input element:
 
         <textarea id="mytext" cols=50 rows=5 ></textarea>
         <script type="text/javascript">
-            $('#mytext').forgetMeNot('textKey');
+            $('#mytext').forgetMeNot();
         </script>
 
 ## Author
